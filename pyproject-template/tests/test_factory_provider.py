@@ -1,9 +1,10 @@
-# pylint: disable=C0116,R0903,E0401,W0703,W1201,redefined-outer-name,missing-function-docstring,E0401,C0114,W0511,W1203,C0200,C0103,W1203,W0613
+# pylint: disable=W1203,C0116,R0903,C0114,W0613,W0621
 import pytest
 
+from exceptions.some_exception import SomeException
 from factories.factory_provider import FactoryProvider
 from factories.a_factory import AFactory
-from tests.moke.persist_fs import PersistFS as persist_fs
+from tests.mocke.persist_fs import PersistFS as persist_fs
 
 
 @pytest.fixture
@@ -22,5 +23,5 @@ def get_unsupported_factory_provider(mock_unsupported_map_yaml_env_vars):
 
 
 def test_provide__unsupported(get_unsupported_factory_provider):
-    with pytest.raises(NotImplementedError):
+    with pytest.raises(SomeException):
         get_unsupported_factory_provider.provide()

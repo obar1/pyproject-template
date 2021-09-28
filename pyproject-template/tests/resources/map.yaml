@@ -1,4 +1,4 @@
 type: map
 repo:
-  path: ./repo
+  path: .
   sorted : true

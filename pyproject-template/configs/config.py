@@ -9,16 +9,16 @@ repo:
   sorted : true
 
 """
-# pylint: disable=C0116,R0903,E0401,W0703,W1201,redefined-outer-name,missing-function-docstring,E0401,C0114,W0511,W1203,C0200,C0103,W1203
 
 
 class Config:
     """Config"""
 
-    def __init__(self, map_yaml_path, persist_fs):
+    def __init__(self, persist_fs, map_yaml_path):
         """persist_fs_load_file: f()  to load file as dict[]"""
-        self.map_yaml_path = map_yaml_path
         self.persist_fs = persist_fs
+        assert self.persist_fs.load_file(map_yaml_path) is not None
+        self.map_yaml_path = map_yaml_path
 
     def __repr__(self):
         """repr"""
@@ -40,9 +40,7 @@ class ConfigMap(Config):
 
     def __init__(self, map_yaml_path, persist_fs):
         """init"""
-        super().__init__(map_yaml_path, persist_fs)
-        self.get_repo_readme_puml = "readme.puml"
-        # TODO: put in the yaml
+        super().__init__(persist_fs, map_yaml_path)
 
     @property
     def get_repo_path(self):

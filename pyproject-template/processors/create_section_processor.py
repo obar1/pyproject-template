@@ -1,7 +1,7 @@
 """CreateSectionProcessor:
 create a new new_section on fs from http address
 """
-# pylint: disable=C0116,R0903,E0401,W0703,W1201,redefined-outer-name,missing-function-docstring,E0401,C0114,W0511,W1203,C0200,C0103,W1203
+# pylint: disable=R0903
 
 from configs.config import ConfigMap
 from models.readme_md import ReadMeMD

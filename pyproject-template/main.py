@@ -1,10 +1,11 @@
-"""MAIN:
-main
+"""Main Module:
+Main
 """
-# pylint: disable=C0116,R0903,E0401,W0703,W1201,redefined-outer-name,missing-function-docstring,E0401,C0114,W0511,W1203,C0200,C0103,W1203
+# pylint: disable=W0703
 
 import logging
 import sys
+import traceback
 from typing import List
 
 from factories.factory_provider import FactoryProvider
@@ -20,7 +21,9 @@ def run_main(argv: List[str]):
 
 if __name__ == "__main__":
     try:
-        logging.basicConfig(format="%(levelname)s:%(message)s", level=logging.INFO)
         run_main(sys.argv)
-    except IndexError:
-        logging.info(f"check the params {sys.argv}")
+    except AssertionError as ex:
+        logging.error(ex)
+    except Exception as ex:
+        logging.error(ex)
+        traceback.print_exc()

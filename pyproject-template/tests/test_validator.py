@@ -1,12 +1,11 @@
-"""Unit tests."""
-# pylint: disable=C0116,R0903,E0401,W0703,W1201,redefined-outer-name,missing-function-docstring,E0401,C0114,W0511,W1203,C0200,C0103,W1203
+# pylint: disable=W1203,C0116,R0903,C0114
 import pytest
 
-from tests.moke.persist_fs import PersistFS as persist_fs
+from tests.mocke.persist_fs import PersistFS as persist_fs
 from validator.validator import Validator
 
 
-def test_build_full_path__pass__fail(get_resource_path):
+def test_build_full_path__pass__fail(get_repo_path):
     # abs path
     assert (
         Validator(
@@ -17,9 +16,9 @@ def test_build_full_path__pass__fail(get_resource_path):
     # relative path
     assert (
         Validator(
-            persist_fs.relative_path_starts_with, get_resource_path, None
+            persist_fs.relative_path_starts_with, get_repo_path, None
         ).build_full_path
-        == get_resource_path
+        == get_repo_path
     )
 
 

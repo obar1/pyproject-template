@@ -1,46 +1,11 @@
 # pyproject-template
 
-simple `pyproject` template with processor and factory and fake perist-fs
-
-## Usage
-
-### using the py scripts
-
-#### 1-time (manual) setup
-
-check latest tag val latest at https://github.com/obar1/pyproject-template/tags
-
-```bash
-bash setup.sh tag target_dir
-```
-> check contents `runme.sh`
-
-#### daily usage
-
--  create new section
-
-```bash
-url=https://cloud.google.com/docs
-bash runme.sh create_section $url
-url=https://cloud.google.com/help
-bash runme.sh create_section $url
-#...etc
-```
-
-- help
-
-```bash
-bash runme.sh help
-```
-
-## Development
+simple pyproject template with some factories and potery and linters
 
 ### Installation
 
 * Install Poetry: <https://python-poetry.org/docs/#installation>
-* Install python env: `pyenv install 3.7.0`
-* Install virtual env: `pyenv virtualenv 3.7.0 pip_mse_ingestion`
-* Activate virtual env: `pyenv activate pip_mse_ingestion`
+* Activate virtual env: `pyenv activate py37pyproject`
 * Install package and dependencies: `poetry install`
 * Install pre-commit hooks: `poetry run pre-commit install`
 
@@ -63,17 +28,42 @@ pre-commit run flake8
 pre-commit run isort
 pre-commit run pylint
 ```
-### Local troubleshooting...
-
-add to `setup.sh` something like
-```bash
-# DEBUG
-cp -r $HOME/git/obar1/0to100.git/ "${DIR_TARGET_LATEST}" || true
-```
-so you can test local fix :)
 
 ### Continuous pytest
 
 ```bash
 export PYTHONPATH=. && ptw -c  -- --capture=tee-sys -o log_cli=true
 ```
+
+## Sample usage to take notes
+> I added some simple functionality just to make this doing something :P
+
+```bash
+cd pyproject-template/
+mkdir myrepo && cd myrepo
+cp ../tests/resources/map.yaml .
+export CONFIG_FILE=$(pwd)/map.yaml
+cat $CONFIG_FILE
+```
+
+```bash
+python ../main.py help
+```
+```
+(pyproject-template.git) √ pyproject-template % python main.py help
+__version__ = "0.0.0"
+['create_section', 'help']
+```
+
+```bash
+hh='https://www.github.com'
+python ../main.py create_section $hh
+```
+```
+ls -1
+https:§§www.github.com
+map.yaml
+```
+![](img000.png)
+
+and so on you can add a placeholder for taking notes

@@ -1,7 +1,7 @@
-# pylint: disable=C0116,R0903,E0401,W0703,W1201,redefined-outer-name,missing-function-docstring,E0401,C0114,W0511,W1203,C0200,C0103,W1203
+# pylint: disable=W1203,C0116,R0903,C0114
 from factories.a_factory import AFactory
 from processors.create_section_processor import CreateSectionProcessor
-from tests.moke.persist_fs import PersistFS as persist_fs
+from tests.mocke.persist_fs import PersistFS as persist_fs
 
 
 def test_process(get_config_map, get_args_create_section_processor, http_url):
