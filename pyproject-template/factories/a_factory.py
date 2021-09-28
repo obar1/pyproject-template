@@ -1,7 +1,7 @@
 """AFactory:
 factory with implemented functionality
 """
-# pylint: disable=C0116,R0903,E0401,W0703,W1201,redefined-outer-name,missing-function-docstring,E0401,C0114,W0511,W1203,C0200,C0103,W1203
+# pylint: disable=W0621,C0116,R0903,E0401,W0703,W1201,missing-function-docstring,E0401,C0114,W0511,W1203,C0200,C0103,W1203
 import logging
 
 from configs.config import ConfigMap
@@ -23,13 +23,13 @@ class AFactory:
 
     def get_processor(self, args):
         """get the processor"""
-        logging.warning(f"args {args}")
+        logging.info(f"args {args}")
         cmd = args[1]
         if cmd == "create_section":
             return self.create_section_processor(args[2])
         if cmd == "help":
             return self.help_processor()
-        logging.warning(self.SUPPORTED_PROCESSOR)
+        logging.info(self.SUPPORTED_PROCESSOR)
         raise ValueError(f"{cmd} not supported")
 
     def create_section_processor(self, http_url):
