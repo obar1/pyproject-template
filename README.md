@@ -1,5 +1,7 @@
 # pyproject-template
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fobar1%2F0to100.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fobar1%2F0to100?ref=badge_shield)
+
 simple `pyproject` template with processor and factory and fake perist-fs
 
 ## Usage
@@ -10,8 +12,27 @@ simple `pyproject` template with processor and factory and fake perist-fs
 
 check latest tag val latest at https://github.com/obar1/pyproject-template/tags
 
+or https://raw.githubusercontent.com/obar1/pyproject-template/main/changelog.md like so
+
 ```bash
-bash setup.sh tag target_dir
+curl https://raw.githubusercontent.com/obar1/pyproject-template/main/changelog.md | grep version | sort -r | head -1
+```
+
+in a any tmp folder get the `setup.sh` like so
+
+```bash
+wget -q https://raw.githubusercontent.com/obar1/pyproject-template/main/setup.sh
+```
+
+and use it like so
+
+```bash
+# TODO: set vars
+set -u
+tag=
+target_dir=
+
+bash setup.sh $tag $target_dir
 ```
 > check contents `runme.sh`
 
@@ -40,7 +61,7 @@ bash runme.sh help
 * Install Poetry: <https://python-poetry.org/docs/#installation>
 * Install python env: `pyenv install 3.7.0`
 * Install virtual env: `pyenv virtualenv 3.7.0 pip_mse_ingestion`
-* Activate virtual env: `pyenv activate pip_mse_ingestion`
+* Activate virtual env: `pyenv activate py37`
 * Install package and dependencies: `poetry install`
 * Install pre-commit hooks: `poetry run pre-commit install`
 
@@ -68,7 +89,7 @@ pre-commit run pylint
 add to `setup.sh` something like
 ```bash
 # DEBUG
-cp -r $HOME/git/obar1/0to100.git/ "${DIR_TARGET_LATEST}" || true
+cp -r $HOME/git/obar1/pyproject-template.git/ "${DIR_TARGET_LATEST}" || true
 ```
 so you can test local fix :)
 
@@ -77,3 +98,6 @@ so you can test local fix :)
 ```bash
 export PYTHONPATH=. && ptw -c  -- --capture=tee-sys -o log_cli=true
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fobar1%2F0to100.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fobar1%2F0to100?ref=badge_large)
