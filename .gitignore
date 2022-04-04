@@ -39,6 +39,3 @@ MANIFEST
 # vscode
 .vscode/
 .vscode/**
-
-# repo
-.repo/**
