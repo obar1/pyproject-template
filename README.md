@@ -45,4 +45,7 @@ mkdir repo
 cp tests/resources/repo/map.yaml repo
 export CONFIG_FILE='./repo/map.yaml'
 python main.py help
+
+python main.py create_section  'https://www.github.com'
+
 ```

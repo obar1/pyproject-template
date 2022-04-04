@@ -33,3 +33,4 @@ class HelpProcessor:
     def process(self):
         """Get version."""
         print(self.get_version)
+        print(self.supported_processor)
