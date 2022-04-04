@@ -34,9 +34,7 @@ MANIFEST
 
 # User-specific stuff
 .idea/
-.idea/*
 .idea/**
-.idea/*
 
 # vscode
 .vscode/
