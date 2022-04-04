@@ -27,4 +27,3 @@ if __name__ == "__main__":
     except Exception as ex:
         logging.error(ex)
         traceback.print_exc()
-

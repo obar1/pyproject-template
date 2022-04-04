@@ -34,3 +34,4 @@ class HelpProcessor:
         """Get version."""
         print(self.get_version)
         print(self.supported_processor)
+        return self.get_version

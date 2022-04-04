@@ -42,8 +42,10 @@ export PYTHONPATH=. && ptw -c  -- --capture=tee-sys -o log_cli=true
 
 ```bash
 cd pyproject-template/
-cp tests/resources/map.yaml .
+mkdir myrepo && cd myrepo
+cp ../tests/resources/map.yaml .
 export CONFIG_FILE=$(pwd)/map.yaml
+cat $CONFIG_FILE
 ```
 
 ```bash
@@ -57,7 +59,7 @@ __version__ = "0.0.0"
 
 ```bash
 python main.py create_section  'https://www.github.com'
-ls -R repo 
+ls -R repo
 ```
 ![](img000.png)
 

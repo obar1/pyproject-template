@@ -13,12 +13,12 @@ class SomeException(Exception):
         self.errors = errors
         if message =="CONFIG_FILE not set in os env":
             logging.error("CONFIG_FILE not set in os env")
-            logging.info("""Ex: 
+            logging.info("""Ex:
 export CONFIG_FILE='./repo/map.yaml'
 """)
         if message.startswith("ConfigNotImplementedError"):
             logging.error("CONFIG_FILE has a type not implemented yet")
-            logging.info("""Ex:            
+            logging.info("""Ex:
 type: map
 repo:
   path: .
