@@ -24,7 +24,7 @@ class FactoryProvider:
 
     def provide(self) -> AFactory:
         """T The method returns instance of MSEFactory."""
-        get_type = Config(self.config_file, self.persist_fs).get_type
+        get_type = Config(self.persist_fs, self.config_file).get_type
         if get_type == MAP:
             config_map = ConfigMap(self.config_file, self.persist_fs)
             return AFactory(config_map, self.persist_fs)

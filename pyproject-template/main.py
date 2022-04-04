@@ -19,11 +19,4 @@ def run_main(argv: List[str]):
 
 
 if __name__ == "__main__":
-    try:
-        logging.basicConfig(format="%(levelname)s:%(message)s", level=logging.INFO)
         run_main(sys.argv)
-    except IndexError:
-        logging.info(f"check the params {sys.argv}")
-        run_main(["", "help"])
-    except Exception as e:
-        logging.critical(f"??? check the params {sys.argv} {e}")

@@ -15,10 +15,11 @@ repo:
 class Config:
     """Config"""
 
-    def __init__(self, map_yaml_path, persist_fs):
+    def __init__(self, persist_fs, map_yaml_path):
         """persist_fs_load_file: f()  to load file as dict[]"""
-        self.map_yaml_path = map_yaml_path
         self.persist_fs = persist_fs
+        assert  self.persist_fs.load_file(map_yaml_path) is not None
+        self.map_yaml_path = map_yaml_path
 
     def __repr__(self):
         """repr"""
@@ -40,7 +41,7 @@ class ConfigMap(Config):
 
     def __init__(self, map_yaml_path, persist_fs):
         """init"""
-        super().__init__(map_yaml_path, persist_fs)
+        super().__init__(persist_fs, map_yaml_path)
         self.get_repo_readme_puml = "readme.puml"
         # TODO: put in the yaml
 
