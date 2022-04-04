@@ -5,6 +5,7 @@ main
 
 import logging
 import sys
+import traceback
 from typing import List
 
 from factories.factory_provider import FactoryProvider
@@ -23,3 +24,7 @@ if __name__ == "__main__":
         run_main(sys.argv)
     except AssertionError as ex:
         logging.error(ex)
+    except Exception as ex:
+        logging.error(ex)
+        traceback.print_exc()
+
