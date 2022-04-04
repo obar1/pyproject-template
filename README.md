@@ -49,7 +49,7 @@ cat $CONFIG_FILE
 ```
 
 ```bash
-python main.py help
+python ../main.py help
 ```
 ```
 (pyproject-template.git) √ pyproject-template % python main.py help
@@ -58,8 +58,13 @@ __version__ = "0.0.0"
 ```
 
 ```bash
-python main.py create_section  'https://www.github.com'
-ls -R repo
+hh='https://www.github.com'
+python ../main.py create_section $hh
+```
+```
+ls -1
+https:§§www.github.com
+map.yaml
 ```
 ![](img000.png)
 
