@@ -41,11 +41,21 @@ export PYTHONPATH=. && ptw -c  -- --capture=tee-sys -o log_cli=true
 > I added some simple functionality just to make this doing something :P
 
 ```bash
-mkdir repo
-cp tests/resources/repo/map.yaml repo
-export CONFIG_FILE='./repo/map.yaml'
+cd pyproject-template/
+cp tests/resources/map.yaml .
+export CONFIG_FILE=$(pwd)/map.yaml
+```
+
+```bash
 python main.py help
+```
+```
+(pyproject-template.git) √ pyproject-template % python main.py help
+__version__ = "0.0.0"
+['create_section', 'help']
+```
+
 
 python main.py create_section  'https://www.github.com'
-
+ls repo
 ```
