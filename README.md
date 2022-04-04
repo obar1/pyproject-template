@@ -37,7 +37,7 @@ pre-commit run pylint
 export PYTHONPATH=. && ptw -c  -- --capture=tee-sys -o log_cli=true
 ```
 
-## Sample usage
+## Sample usage to take notes
 > I added some simple functionality just to make this doing something :P
 
 ```bash
@@ -55,7 +55,10 @@ __version__ = "0.0.0"
 ['create_section', 'help']
 ```
 
-
+```bash
 python main.py create_section  'https://www.github.com'
-ls repo
+ls -R repo 
 ```
+![](img000.png)
+
+and so on you can add a placeholder for taking notes
