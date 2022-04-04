@@ -19,4 +19,7 @@ def run_main(argv: List[str]):
 
 
 if __name__ == "__main__":
+    try:
         run_main(sys.argv)
+    except AssertionError as ex:
+        logging.error(ex)

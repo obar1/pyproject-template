@@ -6,6 +6,7 @@ provides the actual factory based on the type value
 import os
 
 from configs.config import Config, ConfigMap
+from exceptions.section_value_error import SectionValueError
 from factories.a_factory import AFactory
 
 MAP = "map"
@@ -20,6 +21,8 @@ class FactoryProvider:
 
     def __init__(self, persist_fs):
         self.config_file = os.getenv(CONFIG_FILE)
+        if self.config_file is None:
+            raise SectionValueError("CONFIG_FILE not set in os env")
         self.persist_fs = persist_fs
 
     def provide(self) -> AFactory:

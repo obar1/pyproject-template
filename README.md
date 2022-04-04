@@ -36,3 +36,13 @@ pre-commit run pylint
 ```bash
 export PYTHONPATH=. && ptw -c  -- --capture=tee-sys -o log_cli=true
 ```
+
+## Sample usage
+> I added some simple functionality just to make this doing something :P
+
+```bash
+mkdir repo
+cp tests/resources/repo/map.yaml repo
+export CONFIG_FILE='./repo/map.yaml'
+python main.py help
+```
