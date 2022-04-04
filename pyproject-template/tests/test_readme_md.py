@@ -4,7 +4,7 @@ from typing import List
 
 from models.readme_md import ReadMeMD
 from models.section import Section
-from tests.moke.persist_fs import PersistFS as persist_fs
+from tests.mocke.persist_fs import PersistFS as persist_fs
 
 
 def test_refresh_links(get_config_map, http_url):

@@ -3,7 +3,7 @@ import pytest
 
 from factories.factory_provider import FactoryProvider
 from factories.a_factory import AFactory
-from tests.moke.persist_fs import PersistFS as persist_fs
+from tests.mocke.persist_fs import PersistFS as persist_fs
 
 
 @pytest.fixture

@@ -9,7 +9,7 @@ import pytest
 
 from configs.config import ConfigMap
 from factories.factory_provider import CONFIG_FILE
-from tests.moke.persist_fs import PersistFS as persist_fs
+from tests.mocke.persist_fs import PersistFS as persist_fs
 
 
 @pytest.fixture(scope="function", autouse=True)
@@ -101,3 +101,8 @@ def get_args_refresh_puml_processor():
 @pytest.fixture
 def get_args_help_processor():
     yield ["runme.sh", "help"]
+
+
+@pytest.fixture
+def get_args_soemthing_invalid():
+    return ["runme.sh", "something_invalid"]

@@ -2,7 +2,7 @@
 import logging
 
 from models.section import Section
-from tests.moke.persist_fs import PersistFS as persist_fs
+from tests.mocke.persist_fs import PersistFS as persist_fs
 
 
 def test_write(get_config_map, http_url):
