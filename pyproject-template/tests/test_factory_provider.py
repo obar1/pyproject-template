@@ -1,6 +1,7 @@
 # pylint: disable=
 import pytest
 
+from exceptions.some_exception import SomeException
 from factories.factory_provider import FactoryProvider
 from factories.a_factory import AFactory
 from tests.mocke.persist_fs import PersistFS as persist_fs
@@ -22,5 +23,5 @@ def get_unsupported_factory_provider(mock_unsupported_map_yaml_env_vars):
 
 
 def test_provide__unsupported(get_unsupported_factory_provider):
-    with pytest.raises(NotImplementedError):
+    with pytest.raises(SomeException):
         get_unsupported_factory_provider.provide()
