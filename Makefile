@@ -10,14 +10,10 @@ test:
 	python -m pytest -vv --cov=main --cov=mylib test_*.py
 
 format:
-	black .
+	black . pyproject-template
 
 lint:
 	pylint --disable=R,C pyproject-template
 
 refactor: format lint
 
-deploy:
-	echo "TODO: deploy"
-
-all: install lint test format deploy
