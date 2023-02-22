@@ -13,7 +13,7 @@ format:
 	black .
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
+	pylint --disable=R,C pyproject-template
 
 refactor: format lint
 
