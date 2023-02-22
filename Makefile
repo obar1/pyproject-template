@@ -7,7 +7,7 @@ install:
 	pre-commit install
 
 test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+	python -m pytest pyproject-template/tests
 
 format:
 	black . pyproject-template
