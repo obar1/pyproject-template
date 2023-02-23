@@ -1,5 +1,5 @@
 from lib.factories.a_factory import AFactory
-from lib.processors.help_processor import HelpProcessor, VERSION
+from lib.processors.help_processor import HelpProcessor
 from lib.tests.mocke.persist_fs import PersistFS as persist_fs
 
 
