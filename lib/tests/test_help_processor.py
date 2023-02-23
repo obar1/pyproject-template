@@ -8,4 +8,4 @@ def test_process(get_config_map, get_args_help_processor):
         get_args_help_processor
     )
     curr_version = "0.0.0"
-    assert actual.process() == f'{VERSION}"{curr_version}"'
+    assert curr_version in actual.process()

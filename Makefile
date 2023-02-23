@@ -8,8 +8,8 @@ install:
 	pre-commit install
 
 test:
-	python -m pytest -x lib/tests/test_*.py
-	python -m pytest -x -vv --nbval-lax *.ipynb
+	python -m pytest lib/tests/test_*.py
+	python -m pytest -vv --nbval-lax *.ipynb
 
 format:
 	black lib
