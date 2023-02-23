@@ -5,6 +5,7 @@ factory with implemented functionality
 import logging
 
 from lib.configs.config import ConfigMap
+from lib.exceptions.some_exception import SomeException
 from lib.processors.create_section_processor import CreateSectionProcessor
 from lib.processors.help_processor import HelpProcessor
 
@@ -24,13 +25,15 @@ class AFactory:
     def get_processor(self, args):
         """get the processor"""
         logging.info(f"args {args}")
-        cmd = args[1]
-        if cmd == "create_section":
-            return self.create_section_processor(args[2])
-        if cmd == "help":
-            return self.help_processor()
-        logging.info(self.SUPPORTED_PROCESSOR)
-        raise ValueError(f"{cmd} not supported")
+        try:
+            cmd = args[1]
+            if cmd == "create_section":
+                return self.create_section_processor(args[2])
+            if cmd == "help":
+                return self.help_processor()
+            logging.info(self.SUPPORTED_PROCESSOR)
+        except:
+            raise SomeException(f"help")
 
     def create_section_processor(self, http_url):
         """create_section_processor"""

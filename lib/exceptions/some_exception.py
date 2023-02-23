@@ -26,3 +26,6 @@ repo:
   sorted : true
 """
             )
+        if message.startswith("Help"):
+            logging.error("Help")
+            logging.info("Help")

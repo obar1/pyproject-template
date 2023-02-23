@@ -7,7 +7,9 @@ Main
 import logging
 import sys
 import traceback
+from types import NoneType
 from typing import List
+from lib.exceptions.some_exception import SomeException
 
 from lib.factories.a_factory import AFactory
 from lib.factories.factory_provider import FactoryProvider
@@ -25,5 +27,7 @@ if __name__ == "__main__":
         run_main(sys.argv)
     except AssertionError as ex:
         logging.error(ex)
-    except:
-        traceback.print_exc()
+    except AttributeError as ex:
+        logging.error(ex)
+    except Exception as ex:
+        logging.error(ex)
