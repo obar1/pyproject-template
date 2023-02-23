@@ -3,7 +3,7 @@ from typing import List
 
 import pytest
 
-from repository.persist_fs import PersistFS as persist_fs
+from lib.repository.persist_fs import PersistFS as persist_fs
 
 
 @pytest.mark.skip(reason="no way of currently testing this")

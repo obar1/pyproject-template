@@ -3,8 +3,8 @@ a readme md with http and ref
 """
 
 
-from configs.config import ConfigMap
-from models.section import Section
+from lib.configs.config import ConfigMap
+from lib.models.section import Section
 
 
 class ReadMeMD:

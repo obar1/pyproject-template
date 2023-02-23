@@ -1,0 +1,4 @@
+type: map
+repo:
+  path: .
+  sorted : true

@@ -1,6 +1,6 @@
-from factories.a_factory import AFactory
-from processors.create_section_processor import CreateSectionProcessor
-from tests.mocke.persist_fs import PersistFS as persist_fs
+from lib.factories.a_factory import AFactory
+from lib.processors.create_section_processor import CreateSectionProcessor
+from lib.tests.mocke.persist_fs import PersistFS as persist_fs
 
 
 def test_process(get_config_map, get_args_create_section_processor, http_url):

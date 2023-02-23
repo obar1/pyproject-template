@@ -1,6 +1,6 @@
-from factories.a_factory import AFactory
-from processors.help_processor import HelpProcessor, VERSION
-from tests.mocke.persist_fs import PersistFS as persist_fs
+from lib.factories.a_factory import AFactory
+from lib.processors.help_processor import HelpProcessor, VERSION
+from lib.tests.mocke.persist_fs import PersistFS as persist_fs
 
 
 def test_process(get_config_map, get_args_help_processor):

@@ -1,7 +1,7 @@
 import pytest
 
-from tests.mocke.persist_fs import PersistFS as persist_fs
-from validator.validator import Validator
+from lib.tests.mocke.persist_fs import PersistFS as persist_fs
+from lib.validator.validator import Validator
 
 
 def test_build_full_path__pass__fail(get_repo_path):

@@ -1,5 +1,5 @@
 import pytest
-from main import run_main
+from lib.run_from_cli import run_main
 
 
 @pytest.mark.skip(reason="no way of currently testing this")

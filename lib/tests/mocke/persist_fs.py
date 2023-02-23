@@ -7,7 +7,7 @@ fs handling ops
 import logging
 from typing import List
 
-from repository.persist_fs import PersistFS as _PersistFS
+from lib.repository.persist_fs import PersistFS as _PersistFS
 
 
 class PersistFS(_PersistFS):

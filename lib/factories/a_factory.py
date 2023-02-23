@@ -4,9 +4,9 @@ factory with implemented functionality
 
 import logging
 
-from configs.config import ConfigMap
-from processors.create_section_processor import CreateSectionProcessor
-from processors.help_processor import HelpProcessor
+from lib.configs.config import ConfigMap
+from lib.processors.create_section_processor import CreateSectionProcessor
+from lib.processors.help_processor import HelpProcessor
 
 
 class AFactory:

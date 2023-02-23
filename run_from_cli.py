@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """Main Module:
 Main
 """
@@ -7,14 +9,14 @@ import sys
 import traceback
 from typing import List
 
-from factories.factory_provider import FactoryProvider
-from factories.a_factory import AFactory
-from repository.persist_fs import PersistFS as persist_fs
+from lib.factories.a_factory import AFactory
+from lib.factories.factory_provider import FactoryProvider
+from lib.repository.persist_fs import PersistFS
 
 
 def run_main(argv: List[str]):
     """run main new_section"""
-    factory: AFactory = FactoryProvider(persist_fs).provide()
+    factory: AFactory = FactoryProvider(PersistFS).provide()
     return factory.get_processor(argv).process()
 
 
