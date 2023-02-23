@@ -1,7 +1,6 @@
 """Main Module:
 Main
 """
-# pylint: disable=W0703
 
 import logging
 import sys
@@ -24,6 +23,5 @@ if __name__ == "__main__":
         run_main(sys.argv)
     except AssertionError as ex:
         logging.error(ex)
-    except Exception as ex:
-        logging.error(ex)
+    except:
         traceback.print_exc()

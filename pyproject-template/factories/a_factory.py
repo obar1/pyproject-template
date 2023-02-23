@@ -1,7 +1,7 @@
 """AFactory:
 factory with implemented functionality
 """
-# pylint: disable=W1203,C0116,R0903,C0114
+
 import logging
 
 from configs.config import ConfigMap
