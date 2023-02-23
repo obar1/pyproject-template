@@ -3,7 +3,7 @@ new_section on disk
 """
 
 
-from configs.config import ConfigMap
+from lib.configs.config import ConfigMap
 
 
 class Section:

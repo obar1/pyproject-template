@@ -1,11 +1,11 @@
 """CreateSectionProcessor:
-create a new new_section on fs from http address
+create a new new_section on fs from lib.http address
 """
 
 
-from configs.config import ConfigMap
-from models.readme_md import ReadMeMD
-from models.section import Section
+from lib.configs.config import ConfigMap
+from lib.models.readme_md import ReadMeMD
+from lib.models.section import Section
 
 
 class CreateSectionProcessor:

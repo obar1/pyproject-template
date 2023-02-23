@@ -6,9 +6,9 @@ from unittest import mock
 
 import pytest
 
-from configs.config import ConfigMap
-from factories.factory_provider import CONFIG_FILE
-from tests.mocke.persist_fs import PersistFS as persist_fs
+from lib.configs.config import ConfigMap
+from lib.factories.factory_provider import CONFIG_FILE
+from lib.tests.mocke.persist_fs import PersistFS as persist_fs
 
 
 @pytest.fixture(scope="function", autouse=True)

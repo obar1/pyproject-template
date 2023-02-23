@@ -1,9 +1,9 @@
 import pytest
 
-from exceptions.some_exception import SomeException
-from factories.factory_provider import FactoryProvider
-from factories.a_factory import AFactory
-from tests.mocke.persist_fs import PersistFS as persist_fs
+from lib.exceptions.some_exception import SomeException
+from lib.factories.factory_provider import FactoryProvider
+from lib.factories.a_factory import AFactory
+from lib.tests.mocke.persist_fs import PersistFS as persist_fs
 
 # pylint: disable=W0613
 

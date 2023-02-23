@@ -5,9 +5,9 @@ provides the actual factory based on the type value
 
 import os
 
-from configs.config import Config, ConfigMap
-from exceptions.some_exception import SomeException
-from factories.a_factory import AFactory
+from lib.configs.config import Config, ConfigMap
+from lib.exceptions.some_exception import SomeException
+from lib.factories.a_factory import AFactory
 
 MAP = "map"
 

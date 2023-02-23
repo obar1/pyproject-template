@@ -16,7 +16,7 @@ class SomeException(Exception):
 export CONFIG_FILE='./repo/map.yaml'
 """
             )
-        if message.startswith("ConfigNotImplementedError"):
+        elif message.startswith("ConfigNotImplementedError"):
             logging.error("CONFIG_FILE has a type not implemented yet")
             logging.info(
                 """Ex:
@@ -26,3 +26,7 @@ repo:
   sorted : true
 """
             )
+        else:
+            logging.error("Help")
+            logging.info("Help")
+            

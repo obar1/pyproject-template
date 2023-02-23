@@ -31,6 +31,5 @@ class HelpProcessor:
 
     def process(self):
         """Get version."""
-        print(self.get_version)
-        print(self.supported_processor)
-        return self.get_version
+        return f"""{self.supported_processor}
+{self.get_version}"""
