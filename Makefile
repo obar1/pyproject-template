@@ -1,6 +1,9 @@
 venv0:
 	virtualenv venv
-	echo "$  . venv/bin/activate"
+	@echo "$  . ./venv/bin/activate"
+
+jupyter0:
+	 . ./venv/bin/activate
 
 install:
 	pip install --upgrade pip && pip install -r requirements.txt
