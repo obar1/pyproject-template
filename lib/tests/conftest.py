@@ -2,7 +2,7 @@
 
 import logging
 import os
-from lib.unittest import mock
+from unittest import mock
 
 import pytest
 

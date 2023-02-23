@@ -4,13 +4,8 @@
 Main
 """
 
-import logging
 import sys
-import traceback
-from types import NoneType
 from typing import List
-from lib.exceptions.some_exception import SomeException
-
 from lib.factories.a_factory import AFactory
 from lib.factories.factory_provider import FactoryProvider
 from lib.repository.persist_fs import PersistFS
@@ -19,15 +14,20 @@ from lib.repository.persist_fs import PersistFS
 def run_main(argv: List[str]):
     """run main new_section"""
     factory: AFactory = FactoryProvider(PersistFS).provide()
-    return factory.get_processor(argv).process()
+    return (
+        factory.get_processor(argv).process()
+        if factory.get_processor(argv) is not None
+        else None
+    )
+
+
+def demo():
+    """Just a demo"""
+    import os
+
+    os.environ["CONFIG_FILE"] = "./map.yaml"
+    print(run_main(sys.argv))
 
 
 if __name__ == "__main__":
-    try:
-        run_main(sys.argv)
-    except AssertionError as ex:
-        logging.error(ex)
-    except AttributeError as ex:
-        logging.error(ex)
-    except Exception as ex:
-        logging.error(ex)
+    demo()

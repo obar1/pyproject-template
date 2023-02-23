@@ -8,14 +8,14 @@ install:
 	pre-commit install
 
 test:
-	python -m pytest -x pyproject-template/tests/test_*.py
+	python -m pytest -x lib/tests/test_*.py
 	python -m pytest -x -vv --nbval-lax *.ipynb
 
 format:
-	black pyproject-template
+	black lib
 
 lint:
-	pylint --disable=R,C,W0702,W0621,W1203 pyproject-template
+	pylint --disable=R,C,W0702,W0621,W1203 lib
 
 refactor: format lint
 

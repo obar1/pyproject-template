@@ -5,7 +5,6 @@ factory with implemented functionality
 import logging
 
 from lib.configs.config import ConfigMap
-from lib.exceptions.some_exception import SomeException
 from lib.processors.create_section_processor import CreateSectionProcessor
 from lib.processors.help_processor import HelpProcessor
 
@@ -31,9 +30,8 @@ class AFactory:
                 return self.create_section_processor(args[2])
             if cmd == "help":
                 return self.help_processor()
-            logging.info(self.SUPPORTED_PROCESSOR)
         except:
-            raise SomeException(f"help")
+            logging.error(self.SUPPORTED_PROCESSOR)
 
     def create_section_processor(self, http_url):
         """create_section_processor"""
