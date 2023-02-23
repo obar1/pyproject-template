@@ -1,7 +1,6 @@
 """Validator:
 gen validator
 """
-# pylint: disable=
 
 
 class Validator:

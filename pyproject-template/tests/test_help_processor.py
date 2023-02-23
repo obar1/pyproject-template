@@ -1,4 +1,3 @@
-# pylint: disable=W1203,C0116,R0903,C0114
 from factories.a_factory import AFactory
 from processors.help_processor import HelpProcessor, VERSION
 from tests.mocke.persist_fs import PersistFS as persist_fs

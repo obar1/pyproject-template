@@ -2,7 +2,7 @@
 deal with FS
 mocked in Test
 """
-# pylint: disable=W1203,C0116,R0903,C0114
+
 import logging
 import os
 from typing import List

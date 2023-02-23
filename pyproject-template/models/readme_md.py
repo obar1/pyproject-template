@@ -1,7 +1,7 @@
 """ReadMeMD:
 a readme md with http and ref
 """
-# pylint: disable=W1203,C0116,R0903,C0114
+
 
 from configs.config import ConfigMap
 from models.section import Section

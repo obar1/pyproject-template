@@ -1,10 +1,11 @@
-# pylint: disable=W1203,C0116,R0903,C0114,W0613,W0621
 import pytest
 
 from exceptions.some_exception import SomeException
 from factories.factory_provider import FactoryProvider
 from factories.a_factory import AFactory
 from tests.mocke.persist_fs import PersistFS as persist_fs
+
+# pylint: disable=W0613
 
 
 @pytest.fixture

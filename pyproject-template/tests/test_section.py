@@ -1,4 +1,3 @@
-# pylint: disable=W1203,C0116,R0903,C0114
 import logging
 
 from models.section import Section

@@ -1,7 +1,7 @@
 """RefreshMapProcessor:
 refresh sections in map
 """
-# pylint: disable=W1203,C0116,R0903,C0114
+
 import logging
 import os
 

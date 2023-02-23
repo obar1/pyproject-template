@@ -1,5 +1,4 @@
 """Conftest module."""
-# pylint: disable=W1203,C0116,R0903,C0114,W0621,W0613
 
 import logging
 import os
@@ -13,7 +12,7 @@ from tests.mocke.persist_fs import PersistFS as persist_fs
 
 
 @pytest.fixture(scope="function", autouse=True)
-def callattr_ahead_of_alltests(get_repo_path, mock_settings_env_vars):
+def callattr_ahead_of_alltests():
     logging.info("run_pre_start")
     logging.basicConfig(format="%(levelname)s:%(message)s", level=logging.INFO)
     yield

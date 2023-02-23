@@ -1,6 +1,3 @@
-# pylint: disable=W1203,C0116,R0903,C0114
-
-
 import pytest
 from main import run_main
 
