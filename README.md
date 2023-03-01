@@ -4,12 +4,12 @@
 
 simple pyproject template with some factories
 
-> check 
+> check
 ```
 $ ls -1 *.*p*
 
 demo_api_from_notebook.ipynb
 demo_from_cli.py
 run_api.py
-  
+
 ```
