@@ -18,6 +18,6 @@ run_api.py
 use make
 ex
 ```bash
-make venv0
+pip install -m venv .venv
 make install
 ```

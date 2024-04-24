@@ -1,15 +1,6 @@
-venv0:
-	virtualenv venv
-	@echo "$  . ./venv/bin/activate"
-
-
 install:
-	pip install --upgrade pip
-	pip install -r requirements.txt
+	pip install --upgrade pip && pip install -r requirements.txt
 	mypy --install-types
-
-install-local0:
-	pre-commit install
 
 
 test:
