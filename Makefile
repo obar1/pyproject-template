@@ -4,8 +4,10 @@ venv0:
 
 
 install:
-	pip install --upgrade pip && pip install -r requirements.txt
+	pip install --upgrade pip
+	pip install -r requirements.txt
 	pre-commit install
+	mypy --install-types
 
 test:
 	python -m pytest lib/tests/test_*.py
@@ -20,4 +22,4 @@ lint:
 refactor: format lint
 
 jupyter9:
-	 jupyter notebook
+	jupyter notebook

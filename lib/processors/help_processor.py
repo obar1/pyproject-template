@@ -17,7 +17,7 @@ class HelpProcessor:
         self.supported_processor = supported_processor
 
     @property
-    def get_version(self):
+    def get_version(self) -> str:
         """read file and return the version"""
         change_log_relative_path = "../../changelog.md"
         change_log_path = os.path.abspath(

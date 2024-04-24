@@ -30,10 +30,10 @@ class AFactory:
         if cmd == "help":
             return self.help_processor()
 
-    def create_section_processor(self, http_url):
+    def create_section_processor(self, http_url: str) -> CreateSectionProcessor:
         """create_section_processor"""
         return CreateSectionProcessor(self.config_map, self.persist_fs, http_url)
 
-    def help_processor(self):
+    def help_processor(self) -> HelpProcessor:
         """version_processor"""
         return HelpProcessor(self.SUPPORTED_PROCESSOR)

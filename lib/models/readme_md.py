@@ -60,4 +60,5 @@ class ReadMeMD:
         self.persist_fs.write_file(self.readme_md, res)
 
     def read(self):
+        """read contents"""
         return self.persist_fs.read_file(self.readme_md)
