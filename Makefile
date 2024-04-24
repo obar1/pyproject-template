@@ -6,8 +6,11 @@ venv0:
 install:
 	pip install --upgrade pip
 	pip install -r requirements.txt
-	pre-commit install
 	mypy --install-types
+
+install-local0:
+	pre-commit install
+
 
 test:
 	python -m pytest lib/tests/test_*.py
