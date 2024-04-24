@@ -22,7 +22,7 @@ format:
 lint:
 	pylint --disable=R,C,W0702,W0621,W1203 lib
 
-refactor: format lint
+refactor: format lint test
 
 jupyter9:
 	jupyter notebook
