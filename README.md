@@ -13,3 +13,11 @@ demo_from_cli.py
 run_api.py
 
 ```
+## init
+
+use make
+ex
+```bash
+pip install -m venv .venv
+make install
+```
