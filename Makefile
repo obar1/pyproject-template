@@ -1,7 +1,5 @@
 install:
 	pip install --upgrade pip && pip install -r requirements.txt
-	mypy --install-types
-
 
 test:
 	python -m pytest lib/tests/test_*.py
